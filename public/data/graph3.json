@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    { "id": "1", "title": "Generative Adversarial Networks", "authors": "Goodfellow et al.", "year": 2014, "citations": 67890, "category": "Machine Learning" },
+    { "id": "2", "title": "Unsupervised Representation Learning with Deep Convolutional GANs", "authors": "Radford et al.", "year": 2016, "citations": 23456, "category": "Machine Learning" },
+    { "id": "3", "title": "Progressive Growing of GANs for Improved Quality", "authors": "Karras et al.", "year": 2018, "citations": 15432, "category": "Machine Learning" },
+    { "id": "4", "title": "StyleGAN: A Style-Based Generator Architecture", "authors": "Karras et al.", "year": 2019, "citations": 12345, "category": "Machine Learning" },
+    { "id": "5", "title": "Analyzing and Improving the Image Quality of StyleGAN", "authors": "Karras et al.", "year": 2020, "citations": 8765, "category": "Machine Learning" },
+    { "id": "6", "title": "BigGAN: Large Scale GAN Training for High Fidelity Natural Image Synthesis", "authors": "Brock et al.", "year": 2019, "citations": 9876, "category": "Machine Learning" }
+  ],
+  "edges": [
+    { "source": "2", "target": "1", "relation": "cited-by" },
+    { "source": "3", "target": "2", "relation": "cited-by" },
+    { "source": "4", "target": "3", "relation": "cited-by" },
+    { "source": "5", "target": "4", "relation": "cited-by" },
+    { "source": "6", "target": "1", "relation": "cited-by" },
+    { "source": "4", "target": "1", "relation": "cited-by" }
+  ]
+}

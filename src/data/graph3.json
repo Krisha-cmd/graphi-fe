@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    { "id": "1", "title": "Node X", "authors": "Author M", "year": 2017, "citations": 25, "category": "E" },
+    { "id": "2", "title": "Node Y", "authors": "Author N", "year": 2019, "citations": 18, "category": "F" },
+    { "id": "3", "title": "Node Z", "authors": "Author O", "year": 2021, "citations": 22, "category": "E" }
+  ],
+  "edges": [
+    { "source": "1", "target": "2" },
+    { "source": "2", "target": "3" }
+  ]
+}

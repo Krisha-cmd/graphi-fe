@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Graph from './components/Graph';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [selectedFile, setSelectedFile] = useState('graph1.json');
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app-container">
+      <header className="app-header">
+        <h1>Graphi</h1>
+        <select onChange={handleFileChange} value={selectedFile} className="file-selector">
+          <option value="graph1.json">Graph 1</option>
+          <option value="graph2.json">Graph 2</option>
+          <option value="graph3.json">Graph 3</option>
+        </select>
       </header>
+      <main className="app-main">
+        <Graph selectedFile={selectedFile} />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
