@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/graphi-fe/static/css/main.357dea90.css",
+    "main.js": "/graphi-fe/static/js/main.b26ab827.js",
+    "static/js/453.7bfb42f2.chunk.js": "/graphi-fe/static/js/453.7bfb42f2.chunk.js",
+    "static/media/fa-solid-900.woff2": "/graphi-fe/static/media/fa-solid-900.0ae4e6254fc19607c79e.woff2",
+    "static/media/fa-brands-400.woff2": "/graphi-fe/static/media/fa-brands-400.e7461d69dbbff1310a5c.woff2",
+    "static/media/fa-regular-400.woff2": "/graphi-fe/static/media/fa-regular-400.1f38a564cd9eae27ebc3.woff2",
+    "static/media/fa-v4compatibility.woff2": "/graphi-fe/static/media/fa-v4compatibility.661bd6b7245d5205d3e1.woff2",
+    "index.html": "/graphi-fe/index.html",
+    "main.357dea90.css.map": "/graphi-fe/static/css/main.357dea90.css.map",
+    "main.b26ab827.js.map": "/graphi-fe/static/js/main.b26ab827.js.map",
+    "453.7bfb42f2.chunk.js.map": "/graphi-fe/static/js/453.7bfb42f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.357dea90.css",
+    "static/js/main.b26ab827.js"
+  ]
+}
