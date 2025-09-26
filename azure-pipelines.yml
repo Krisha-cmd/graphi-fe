@@ -19,20 +19,3 @@ steps:
     git push github HEAD:main --force
   displayName: "Push changes to GitHub"
 
-# --- NEW STEPS FOR REACT BUILD ---
-
-# Step 5: Install Node.js
-- task: NodeTool@0
-  inputs:
-    versionSpec: '18.x'   # Or the Node version your React app uses
-  displayName: "Install Node.js"
-
-# Step 6: Install npm dependencies
-- script: |
-    npm install
-  displayName: "Install npm packages"
-
-# Step 7: Deploy to GitHub Pages
-- script: |
-    npm run deploy
-  displayName: "Push changes to GitHub Pages"
