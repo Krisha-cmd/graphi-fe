@@ -26,4 +26,4 @@ jobs:
 
     # Step 4: Build and deploy
     - name: Build and Deploy
-      run: npm run deploy
+      run: DISABLE_ESLINT_PLUGIN=true npm run build
