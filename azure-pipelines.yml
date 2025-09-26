@@ -1,5 +1,5 @@
 steps:
-# Step 1: Checkout with full history (important!)
+# Step 1: Checkout with full history
 - checkout: self
   fetchDepth: 0
 
@@ -14,12 +14,25 @@ steps:
     git remote add github https://$(GITHUB_USERNAME):$(GITHUB_TOKEN)@github.com/Krisha-cmd/graphi-fe.git
   displayName: "Add GitHub remote"
 
-# Step 4: Push changes
+# Step 4: Push changes to GitHub
 - script: |
     git push github HEAD:main --force
   displayName: "Push changes to GitHub"
 
-# Step 5: Push changes to github pages
+# --- NEW STEPS FOR REACT BUILD ---
+
+# Step 5: Install Node.js
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'   # Or the Node version your React app uses
+  displayName: "Install Node.js"
+
+# Step 6: Install npm dependencies
+- script: |
+    npm install
+  displayName: "Install npm packages"
+
+# Step 7: Deploy to GitHub Pages
 - script: |
     npm run deploy
-  displayName: "Push changes to GitHub pages"
+  displayName: "Push changes to GitHub Pages"
