@@ -1,12 +1,7 @@
-trigger:
-- main   # or your default branch in Azure Repos
-
-pool:
-  vmImage: 'ubuntu-latest'
-
 steps:
-# Step 1: Checkout the Azure repo code
+# Step 1: Checkout with full history (important!)
 - checkout: self
+  fetchDepth: 0
 
 # Step 2: Configure Git
 - script: |
@@ -19,12 +14,7 @@ steps:
     git remote add github https://Krisha-cmd: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@github.com/Krisha-cmd/graphi-fe.git
   displayName: "Add GitHub remote"
 
-# Step 4: Push changes to GitHub
+# Step 4: Push changes
 - script: |
-    # Push current branch to GitHub (example: main)
     git push github HEAD:main --force
-
-    # (Optional) Push all branches and tags
-    # git push github --all --force
-    # git push github --tags --force
   displayName: "Push changes to GitHub"
