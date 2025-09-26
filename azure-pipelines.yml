@@ -18,3 +18,8 @@ steps:
 - script: |
     git push github HEAD:main --force
   displayName: "Push changes to GitHub"
+
+# Step 5: Push changes to github pages
+- script: |
+    npm run deploy
+  displayName: "Push changes to GitHub pages"
