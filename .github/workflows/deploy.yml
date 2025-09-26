@@ -3,27 +3,26 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout repo
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Step 2: Set up Node.js
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # Use the Node version your project needs
+        node-version: '18'
 
-    # Step 3: Install dependencies
     - name: Install npm packages
       run: npm install
 
-    # Step 4: Build and deploy
+    # 👇 Deploy using GitHub Actions token
     - name: Build and Deploy
-      run: DISABLE_ESLINT_PLUGIN=true npm run build
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: CI=false npm run deploy
