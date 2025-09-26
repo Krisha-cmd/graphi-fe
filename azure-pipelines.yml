@@ -11,7 +11,7 @@ steps:
 
 # Step 3: Add GitHub remote
 - script: |
-    git remote add github https://Krisha-cmd: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@github.com/Krisha-cmd/graphi-fe.git
+    git remote add github https://$(GITHUB_USERNAME):$(GITHUB_TOKEN)@github.com/Krisha-cmd/graphi-fe.git
   displayName: "Add GitHub remote"
 
 # Step 4: Push changes
